@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"ranges": "c",
+		"compare": "cpp",
+		"algorithm": "c"
+	}
+}
