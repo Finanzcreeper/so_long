@@ -6,11 +6,10 @@
 /*   By: nreher <nreher@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 11:51:37 by nreher            #+#    #+#             */
-/*   Updated: 2023/03/28 16:23:52 by nreher           ###   ########.fr       */
+/*   Updated: 2023/03/28 16:46:16 by nreher           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "./minilibx-linux/mlx.h"
 #include "so_long.h"
 
 int	mlxer(t_all *all)
@@ -94,60 +93,3 @@ void	more_hooks(mlx_key_data_t keydata, void *all)
 	if (keydata.action == 1 || keydata.action == 2)
 		redraw(all);
 }
-
-// void	resize(int width, int height, void *all)
-// {
-// 	mlx_resize_image(((t_all *)all)->img.collect, height
-// 		/ ((t_all *)all)->zeilen, width / ((t_all *)all)->spalten);
-// 	mlx_resize_image(((t_all *)all)->img.empty, height
-// 		/ ((t_all *)all)->zeilen, width / ((t_all *)all)->spalten);
-// 	mlx_resize_image(((t_all *)all)->img.exit, height
-// 		/ ((t_all *)all)->zeilen, width / ((t_all *)all)->spalten);
-// 	mlx_resize_image(((t_all *)all)->img.player, height
-// 		/ ((t_all *)all)->zeilen, width / ((t_all *)all)->spalten);
-// 	mlx_resize_image(((t_all *)all)->img.wall, height
-// 		/ ((t_all *)all)->zeilen, width / ((t_all *)all)->spalten);
-// 	redraw_all(((t_all *)all));
-// }
-
-// void	mouse_hook(double xdelta, double ydelta, void *all)
-// {
-// 	if (ydelta > 0)
-// 	{
-// 		((t_all *)all)->height += 10;
-// 		if (((t_all *)all)->height > ((t_all *)all)->dat.img->height)
-// 			((t_all *)all)->height = ((t_all *)all)->dat.img->height;
-// 		draw((t_all *)all);
-// 	}
-// 	if (ydelta < 0)
-// 	{
-// 		((t_all *)all)->height -= 10;
-// 		if (((t_all *)all)->height < 0)
-// 			((t_all *)all)->height = 0;
-// 		draw((t_all *)all);
-// 	}
-// }
-
-// void	ft_hook(void *all)
-// {
-// 	more_hooks(((t_all *)all));
-// 	if (mlx_is_key_down(((t_all *)all)->vars.mlx,
-// 			MLX_KEY_W) && iwa(all) != 1)
-// 		((t_all *)all)->img.player->instances[0].y
-// 			-= ((t_all *)all)->img.empty->height;
-// 	if (mlx_is_key_down(((t_all *)all)->vars.mlx,
-// 			MLX_KEY_S) && iwb(all) != 1)
-// 		((t_all *)all)->img.player->instances[0].y
-// 			+= ((t_all *)all)->img.empty->height;
-// 	if (mlx_is_key_down(((t_all *)all)->vars.mlx,
-// 			MLX_KEY_A) && iwl(all) != 1)
-// 		((t_all *)all)->img.player->instances[0].x
-// 			-= ((t_all *)all)->img.empty->width;
-// 	if (mlx_is_key_down(((t_all *)all)->vars.mlx,
-// 			MLX_KEY_D) && iwr(all) != 1)
-// 		((t_all *)all)->img.player->instances[0].x
-// 			+= ((t_all *)all)->img.empty->width;
-// 	redraw(all);
-// }
-
-//cc main.c  -lmlx -L minilibx-linux/ -lXext -lX11 -lm
